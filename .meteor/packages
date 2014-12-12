@@ -7,4 +7,5 @@ meteor-platform
 autopublish
 insecure
 tap:i18n
+iron:router
 

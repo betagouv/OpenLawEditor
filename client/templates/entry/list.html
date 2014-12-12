@@ -1,0 +1,9 @@
+<template name="entryList">
+	<p>{{_ 'canBeEdited'}}{{_ 'colon'}}</p>
+
+	<ul>
+	{{#each taxes}}
+		<li><a href="{{pathFor 'entryShow'}}">{{name}}</a></li>
+	{{/each}}
+	</ul>
+</template>
