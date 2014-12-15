@@ -4,7 +4,13 @@ var TaxesFr = [
 	// },
 	{
 		"_id": "salbrut",
-		"name": "Salaire brut"
+		"name": "Salaire brut",
+		facets: {
+			swagger: {
+				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				operationId: "salbrut"
+			}
+		}
 	},
 	// "salsuperbrut": {
 	// 	"name": "Salaire super brut"
@@ -38,15 +44,33 @@ var TaxesFr = [
 	// },
 	{
 		"_id": "accident_du_travail",
-		"name": "Accident du travail"
+		"name": "Accident du travail",
+		facets: {
+			swagger: {
+				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				operationId: "accident_du_travail"
+			}
+		}
 	},
 	{
 		"_id": "famille",
-		"name": "Famille"
+		"name": "Famille",
+		facets: {
+			swagger: {
+				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				operationId: "famille"
+			}
+		}
 	},
 	{
 		"_id": "maladie_employeur",
-		"name": "Maladie"
+		"name": "Maladie",
+		facets: {
+			swagger: {
+				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				operationId: "maladie_employeur"
+			}
+		}
 	},
 	// "cotisations_patronales_main_d_oeuvre": {
 	// 	"name": "Cotisations sociales patronales main d'œuvre"
@@ -65,11 +89,23 @@ var TaxesFr = [
 	// },
 	{
 		"_id": "fnal_tranche_a",
-		"name": "FNAL"
+		"name": "FNAL",
+		facets: {
+			swagger: {
+				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				operationId: "fnal_tranche_a"
+			}
+		}
 	},
 	{
 		"_id": "fnal_tranche_a_plus_20",
-		"name": "FNAL +20"
+		"name": "FNAL +20",
+		facets: {
+			swagger: {
+				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				operationId: "fnal_tranche_a_plus_20"
+			}
+		}
 	},
 	// "participation_effort_construction": {
 	// 	"name": "Participation à l'effort de construction"
@@ -79,11 +115,24 @@ var TaxesFr = [
 	// },
 	{
 		"_id": "versement_transport",
-		"name": "Versement transport"
+		"name": "Versement transport",
+		facets: {
+			swagger: {
+				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				operationId: "versement_transport"
+			}
+		}
 	},
-	// "allegement_fillon": {
-	// 	"name": "Allègement sur les bas salaires (Fillon)"
-	// },
+	{
+		"_id": "allegement_fillon",
+		"name": "Allègement sur les bas salaires (Fillon)",
+		facets: {
+			swagger: {
+				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				operationId: "calculateFillon"
+			}
+		}
+	},
 	// "alleg_cice": {
 	// 	"name": "Crédit d'impôt compétitivité-emploi"
 	// },
@@ -116,41 +165,89 @@ var TaxesFr = [
 	// },
 	{
 		"_id": "vieillesse_plafonnee_employe",
-		"name": "Vieillesse plafonnée (employé)"
+		"name": "Vieillesse plafonnée (employé)",
+		facets: {
+			swagger: {
+				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				operationId: "vieillesse_plafonnee_employe"
+			}
+		}
 	},
 	{
 		"_id": "vieillesse_deplafonnee_employe",
-		"name": "Vieillesse déplafonnée (employé)"
+		"name": "Vieillesse déplafonnée (employé)",
+		facets: {
+			swagger: {
+				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				operationId: "vieillesse_deplafonnee_employe"
+			}
+		}
 	},
 	// "cotisations_salariales_non_contributives": {
 	// 	"name": "Cotisations sociales salariales non contributives"
 	// },
 	{
 		"_id": "maladie_employe",
-		"name": "Maladie (employé)"
+		"name": "Maladie (employé)",
+		facets: {
+			swagger: {
+				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				operationId: "maladie_employe"
+			}
+		}
 	},
 	{
 		"_id": "csgsald",
-		"name": "CSG déductible (salaires)"
+		"name": "CSG déductible (salaires)",
+		facets: {
+			swagger: {
+				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				operationId: "csgsald"
+			}
+		}
 	},
 	{
 		"_id": "mhsup",
-		"name": "Heures supplémentaires éxonérées"
+		"name": "Heures supplémentaires éxonérées",
+		facets: {
+			swagger: {
+				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				operationId: "mhsup"
+			}
+		}
 	},
 	{
 		"_id": "csgsali",
-		"name": "CSG non déductible (salaires)"
+		"name": "CSG non déductible (salaires)",
+		facets: {
+			swagger: {
+				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				operationId: "csgsali"
+			}
+		}
 	},
 	{
 		"_id": "crdssal",
-		"name": "CRDS (salaires)"
+		"name": "CRDS (salaires)",
+		facets: {
+			swagger: {
+				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				operationId: "crdssal"
+			}
+		}
 	},
 	// "hsup": {
 	// 	"name": "Heures supplémentaires"
 	// },
 	{
 		"_id": "salnet",
-		"name": "Salaire net"
+		"name": "Salaire net",
+		facets: {
+			swagger: {
+				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				operationId: "calculateNet"
+			}
+		}
 	}
 ];
 
