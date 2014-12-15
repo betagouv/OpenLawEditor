@@ -7,7 +7,7 @@ var TaxesFr = [
 		"name": "Salaire brut",
 		facets: {
 			swagger: {
-				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				resourceDeclaration: '/swagger-paie.json',
 				operationId: "salbrut"
 			}
 		}
@@ -47,7 +47,7 @@ var TaxesFr = [
 		"name": "Accident du travail",
 		facets: {
 			swagger: {
-				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				resourceDeclaration: '/swagger-paie.json',
 				operationId: "accident_du_travail"
 			}
 		}
@@ -57,7 +57,7 @@ var TaxesFr = [
 		"name": "Famille",
 		facets: {
 			swagger: {
-				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				resourceDeclaration: '/swagger-paie.json',
 				operationId: "famille"
 			}
 		}
@@ -67,7 +67,7 @@ var TaxesFr = [
 		"name": "Maladie",
 		facets: {
 			swagger: {
-				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				resourceDeclaration: '/swagger-paie.json',
 				operationId: "maladie_employeur"
 			}
 		}
@@ -92,7 +92,7 @@ var TaxesFr = [
 		"name": "FNAL",
 		facets: {
 			swagger: {
-				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				resourceDeclaration: '/swagger-paie.json',
 				operationId: "fnal_tranche_a"
 			}
 		}
@@ -102,7 +102,7 @@ var TaxesFr = [
 		"name": "FNAL +20",
 		facets: {
 			swagger: {
-				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				resourceDeclaration: '/swagger-paie.json',
 				operationId: "fnal_tranche_a_plus_20"
 			}
 		}
@@ -118,7 +118,7 @@ var TaxesFr = [
 		"name": "Versement transport",
 		facets: {
 			swagger: {
-				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				resourceDeclaration: '/swagger-paie.json',
 				operationId: "versement_transport"
 			}
 		}
@@ -128,7 +128,7 @@ var TaxesFr = [
 		"name": "Allègement sur les bas salaires (Fillon)",
 		facets: {
 			swagger: {
-				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				resourceDeclaration: '/swagger-paie.json',
 				operationId: "calculateFillon"
 			}
 		}
@@ -168,7 +168,7 @@ var TaxesFr = [
 		"name": "Vieillesse plafonnée (employé)",
 		facets: {
 			swagger: {
-				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				resourceDeclaration: '/swagger-paie.json',
 				operationId: "vieillesse_plafonnee_employe"
 			}
 		}
@@ -178,7 +178,7 @@ var TaxesFr = [
 		"name": "Vieillesse déplafonnée (employé)",
 		facets: {
 			swagger: {
-				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				resourceDeclaration: '/swagger-paie.json',
 				operationId: "vieillesse_deplafonnee_employe"
 			}
 		}
@@ -191,7 +191,7 @@ var TaxesFr = [
 		"name": "Maladie (employé)",
 		facets: {
 			swagger: {
-				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				resourceDeclaration: '/swagger-paie.json',
 				operationId: "maladie_employe"
 			}
 		}
@@ -201,7 +201,7 @@ var TaxesFr = [
 		"name": "CSG déductible (salaires)",
 		facets: {
 			swagger: {
-				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				resourceDeclaration: '/swagger-paie.json',
 				operationId: "csgsald"
 			}
 		}
@@ -211,7 +211,7 @@ var TaxesFr = [
 		"name": "Heures supplémentaires éxonérées",
 		facets: {
 			swagger: {
-				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				resourceDeclaration: '/swagger-paie.json',
 				operationId: "mhsup"
 			}
 		}
@@ -221,7 +221,7 @@ var TaxesFr = [
 		"name": "CSG non déductible (salaires)",
 		facets: {
 			swagger: {
-				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				resourceDeclaration: '/swagger-paie.json',
 				operationId: "csgsali"
 			}
 		}
@@ -231,7 +231,7 @@ var TaxesFr = [
 		"name": "CRDS (salaires)",
 		facets: {
 			swagger: {
-				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				resourceDeclaration: '/swagger-paie.json',
 				operationId: "crdssal"
 			}
 		}
@@ -244,7 +244,7 @@ var TaxesFr = [
 		"name": "Salaire net",
 		facets: {
 			swagger: {
-				resourceDeclaration: 'http://paie.sgmap.fr/api/',
+				resourceDeclaration: '/swagger-paie.json',
 				operationId: "calculateNet"
 			}
 		}
