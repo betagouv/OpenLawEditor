@@ -29,7 +29,7 @@
 			window.setTimeout(function() {
 				var methodDoc = $('#' + TARGET_ID).find('#default_' + "{{operationId}}").remove();
 
-				$('#' + TARGET_ID).replaceWith(methodDoc);
+				$('#' + TARGET_ID).empty().append(methodDoc);
 				$('#' + TARGET_ID).show();
 			}, 500);	// this timeout is guesswork on how long it takes for the Swagger resource declaration to be loaded and the SwaggerUI DOM tree to be constructed
 		});
