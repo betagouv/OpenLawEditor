@@ -4,13 +4,7 @@ var TaxesFr = [
 	// },
 	{
 		"_id": "salbrut",
-		"name": "Salaire brut",
-		facets: {
-			swagger: {
-				resourceDeclaration: '/swagger-paie.json',
-				operationId: "salbrut"
-			}
-		}
+		"name": "Salaire brut"
 	},
 	// "salsuperbrut": {
 	// 	"name": "Salaire super brut"
@@ -44,33 +38,15 @@ var TaxesFr = [
 	// },
 	{
 		"_id": "accident_du_travail",
-		"name": "Accident du travail",
-		facets: {
-			swagger: {
-				resourceDeclaration: '/swagger-paie.json',
-				operationId: "accident_du_travail"
-			}
-		}
+		"name": "Accident du travail"
 	},
 	{
 		"_id": "famille",
-		"name": "Famille",
-		facets: {
-			swagger: {
-				resourceDeclaration: '/swagger-paie.json',
-				operationId: "famille"
-			}
-		}
+		"name": "Famille"
 	},
 	{
 		"_id": "maladie_employeur",
-		"name": "Maladie",
-		facets: {
-			swagger: {
-				resourceDeclaration: '/swagger-paie.json',
-				operationId: "maladie_employeur"
-			}
-		}
+		"name": "Maladie"
 	},
 	// "cotisations_patronales_main_d_oeuvre": {
 	// 	"name": "Cotisations sociales patronales main d'œuvre"
@@ -89,23 +65,11 @@ var TaxesFr = [
 	// },
 	{
 		"_id": "fnal_tranche_a",
-		"name": "FNAL",
-		facets: {
-			swagger: {
-				resourceDeclaration: '/swagger-paie.json',
-				operationId: "fnal_tranche_a"
-			}
-		}
+		"name": "FNAL"
 	},
 	{
 		"_id": "fnal_tranche_a_plus_20",
-		"name": "FNAL +20",
-		facets: {
-			swagger: {
-				resourceDeclaration: '/swagger-paie.json',
-				operationId: "fnal_tranche_a_plus_20"
-			}
-		}
+		"name": "FNAL +20"
 	},
 	// "participation_effort_construction": {
 	// 	"name": "Participation à l'effort de construction"
@@ -115,13 +79,7 @@ var TaxesFr = [
 	// },
 	{
 		"_id": "versement_transport",
-		"name": "Versement transport",
-		facets: {
-			swagger: {
-				resourceDeclaration: '/swagger-paie.json',
-				operationId: "versement_transport"
-			}
-		}
+		"name": "Versement transport"
 	},
 	{
 		"_id": "allegement_fillon",
@@ -165,76 +123,34 @@ var TaxesFr = [
 	// },
 	{
 		"_id": "vieillesse_plafonnee_employe",
-		"name": "Vieillesse plafonnée (employé)",
-		facets: {
-			swagger: {
-				resourceDeclaration: '/swagger-paie.json',
-				operationId: "vieillesse_plafonnee_employe"
-			}
-		}
+		"name": "Vieillesse plafonnée (employé)"
 	},
 	{
 		"_id": "vieillesse_deplafonnee_employe",
-		"name": "Vieillesse déplafonnée (employé)",
-		facets: {
-			swagger: {
-				resourceDeclaration: '/swagger-paie.json',
-				operationId: "vieillesse_deplafonnee_employe"
-			}
-		}
+		"name": "Vieillesse déplafonnée (employé)"
 	},
 	// "cotisations_salariales_non_contributives": {
 	// 	"name": "Cotisations sociales salariales non contributives"
 	// },
 	{
 		"_id": "maladie_employe",
-		"name": "Maladie (employé)",
-		facets: {
-			swagger: {
-				resourceDeclaration: '/swagger-paie.json',
-				operationId: "maladie_employe"
-			}
-		}
+		"name": "Maladie (employé)"
 	},
 	{
 		"_id": "csgsald",
-		"name": "CSG déductible (salaires)",
-		facets: {
-			swagger: {
-				resourceDeclaration: '/swagger-paie.json',
-				operationId: "csgsald"
-			}
-		}
+		"name": "CSG déductible (salaires)"
 	},
 	{
 		"_id": "mhsup",
-		"name": "Heures supplémentaires éxonérées",
-		facets: {
-			swagger: {
-				resourceDeclaration: '/swagger-paie.json',
-				operationId: "mhsup"
-			}
-		}
+		"name": "Heures supplémentaires éxonérées"
 	},
 	{
 		"_id": "csgsali",
-		"name": "CSG non déductible (salaires)",
-		facets: {
-			swagger: {
-				resourceDeclaration: '/swagger-paie.json',
-				operationId: "csgsali"
-			}
-		}
+		"name": "CSG non déductible (salaires)"
 	},
 	{
 		"_id": "crdssal",
-		"name": "CRDS (salaires)",
-		facets: {
-			swagger: {
-				resourceDeclaration: '/swagger-paie.json',
-				operationId: "crdssal"
-			}
-		}
+		"name": "CRDS (salaires)"
 	},
 	// "hsup": {
 	// 	"name": "Heures supplémentaires"
