@@ -20,12 +20,18 @@
 				docExpansion: "full"
 			});
 
+
+			// The SwaggerUI library does not allow to display parts of the documentation only.
+			// We thus render the whole documentation and then extract the part we're interested in.
 			window.swaggerUi.load();
+			$('#' + TARGET_ID).hide();	// prevent flicker
 
 			window.setTimeout(function() {
 				var methodDoc = $('#' + TARGET_ID).find('#default_' + "{{operationId}}").remove();
+
 				$('#' + TARGET_ID).replaceWith(methodDoc);
-			}, 500);
+				$('#' + TARGET_ID).show();
+			}, 500);	// this timeout is guesswork on how long it takes for the Swagger resource declaration to be loaded and the SwaggerUI DOM tree to be constructed
 		});
 	</script>
 </template>
