@@ -1,15 +1,27 @@
-/** Checks that the given Swagger resource declaration is supported by this library.
-*
-*@throws	{RangeError}	If the Swagger version is not supported.
-*/
-function check(swagger) {
-	var SUPPORTED_VERSION = 2;
-
-	if (swagger.swagger.split('.')[0] != SUPPORTED_VERSION)
-		throw new RangeError('Only Swagger v' + SUPPORTED_VERSION + ' is supported');
+Template.swagger.created = function() {
+	try {
+		check(this.data);
+	} catch(err) {
+		console.error(err, 'We will still render. Please report any layout issues you get.');
+	}
 }
 
-function transform(swagger) {
+Template.swagger.helpers({
+	paths: function() {
+		return transformResponses(Template.instance().data.paths);
+	}
+});
+
+/** Checks that the given Swagger resource declaration is supported by this library.
+*
+*@param	{Object}	resourceDeclaration	The Swagger resource declaration.
+*@throws	{RangeError}	If the Swagger version is not supported.
+*/
+function check(resourceDeclaration) {
+	var SUPPORTED_VERSION = 2;
+
+	if (! resourceDeclaration.swagger || resourceDeclaration.swagger.split('.')[0] != SUPPORTED_VERSION)
+		throw new RangeError('Only Swagger v' + SUPPORTED_VERSION + ' is supported');
 }
 
 /**
@@ -28,7 +40,7 @@ function transformResponses(responses, schemas) {
 
 		response.code = code;
 
-		if (response.schema.$ref)
+		if (response.schema && response.schema.$ref)
 			console.error('$ref in responses are not resolved yet');	// TODO
 
 		result.push(response);

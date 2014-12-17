@@ -1,0 +1,7 @@
+<template name="swagger">
+	{{> swagger_info}}
+
+	{{#each paths}}
+		{{> swagger_path}}
+	{{/each}}
+</template>
