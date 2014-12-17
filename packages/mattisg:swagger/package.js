@@ -34,5 +34,5 @@ Package.onTest(function(api) {
 	api.use('tinytest');
 	api.use('mattisg:swagger');
 	api.addFiles(all('lib', 'js')('compatibility transformers'));
-	api.addFiles('mattisg:swagger-tests.js');
+	api.addFiles(all('test', 'js')('compatibility transformers'));
 });
