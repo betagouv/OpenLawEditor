@@ -31,8 +31,10 @@ Package.onUse(function(api) {
 });
 
 Package.onTest(function(api) {
+	api.use('coffeescript');
 	api.use('tinytest');
+	api.use('peterellisjones:describe');
 	api.use('mattisg:swagger');
 	api.addFiles(all('lib', 'js')('compatibility transformers'));
-	api.addFiles(all('test', 'js')('compatibility transformers'));
+	api.addFiles(all('test', 'coffee')('compatibility transformers'));
 });
