@@ -24,6 +24,7 @@ Package.onUse(function(api) {
 	api.use([ 'templating' ], 'client');
 	api.use('tap:i18n@1.2.1');
 	// api.use('nooitaf:semantic-ui@1.2.1', { weak: true });
+	api.addFiles(all('lib', 'js')('compatibility transformers'));
 	api.addFiles(all('client/templates', 'html')('parameter path response info swagger'), 'client');
 	api.addFiles(all('client/templates', 'js')('swagger'), 'client');
 	api.addFiles(all('i18n', 'fr.i18n.json')('helpers swagger path'));
@@ -32,5 +33,6 @@ Package.onUse(function(api) {
 Package.onTest(function(api) {
 	api.use('tinytest');
 	api.use('mattisg:swagger');
+	api.addFiles(all('lib', 'js')('compatibility transformers'));
 	api.addFiles('mattisg:swagger-tests.js');
 });
