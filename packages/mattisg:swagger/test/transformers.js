@@ -11,7 +11,7 @@ Tinytest.add('transformResponses should inline HTTP status code', function(test)
 			}
 		}
 	},
-	expected = {
+	expected = [ {
 		"code": "200",
 		"description": "Salaire net en euros.",
 		"schema": {
@@ -21,7 +21,7 @@ Tinytest.add('transformResponses should inline HTTP status code', function(test)
 		"examples": {
 			"application/json": "112043"
 		}
-	};
+	} ];
 
 	test.equal(transformResponses(responses), expected);
 });
@@ -35,7 +35,7 @@ Tinytest.add('transformResponses should resolve schema references', function(tes
 			}
 		}
 	},
-	expected = {
+	expected = [ {
 		"code": "400",
 		"description": "Aucun salaire spécifié.",
 		"schema": {
@@ -68,7 +68,7 @@ Tinytest.add('transformResponses should resolve schema references', function(tes
 				"message"
 			]
 		}
-	};
+	} ];
 
 	test.equal(transformResponses(responses), expected);
 });
