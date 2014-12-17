@@ -6,6 +6,8 @@
 meteor-platform
 autopublish
 insecure
-tap:i18n
 iron:router
+http
+mattisg:swagger
+tap:i18n
 

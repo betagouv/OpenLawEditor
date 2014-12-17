@@ -2,6 +2,9 @@
 	<h2>{{name}}</h2>
 
 	{{#if facets.swagger}}
+
+	{{> swagger resourceDeclaration}}
+
 	<h3>API</h3>
 	{{> swaggerFacet facets.swagger}}
 	{{/if}}

@@ -1,0 +1,9 @@
+{
+	"name": "Nom",
+	"type": "Type",
+	"description": "Description",
+	"source": "Source",
+	"value": "Valeur",
+	"httpCode": "Code HTTP",
+	"contentModel": "Modèle du contenu"
+}

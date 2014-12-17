@@ -1,0 +1,9 @@
+<template name="parameter">
+	<tr class="{{#if required}}required{{/if}}">
+		<th><label for="{{name}}">{{name}}</label></th>
+		<td>{{type}}</td>
+		<td>{{description}}</td>
+		<td>{{in}}</td>
+		<td><input name="{{name}}" type="{{type}}" required="{{required}}" min="{{minimum}}" max="{{maximum}}"/></td>
+	</tr>
+</template>
