@@ -21,7 +21,7 @@ describe 'transformResponses', ->
 
 		test.equal transformResponses(responses), expected
 
-	it 'should resolve schema references', (test) ->
+	# it 'should resolve schema references', (test) ->	# pending
 		responses =
 			"400":
 				"description": "Aucun salaire spécifié."
@@ -61,4 +61,4 @@ describe 'transformResponses', ->
 			}
 		} ]
 
-		test.equal transformResponses(responses), expected
+	#	test.equal transformResponses(responses), expected	# pending
