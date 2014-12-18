@@ -9,6 +9,8 @@ makePathsIterable = function makePathsIterable(paths) {
 		if (! Object.prototype.hasOwnProperty.call(paths, path))
 			continue;
 
+		var methods = paths[path];
+
 		for (var method in methods) {
 			if (! Object.prototype.hasOwnProperty.call(methods, method))
 				continue;
