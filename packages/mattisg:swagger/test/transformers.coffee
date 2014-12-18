@@ -1,3 +1,60 @@
+describe 'makePathsIterable', ->
+	it 'should unwrap paths and methods', (test) ->
+		paths =
+			"/first":
+				get:
+					operationId: "first"
+			"/second":
+				post:
+					operationId: "second"
+
+		expected = [
+			{
+				"path": "/first"
+				"method": "get"
+				"operationId": "first"
+			}, {
+				"path": "/second"
+				"method": "post"
+				"operationId": "second"
+			}
+		]
+
+		test.equal makePathsIterable(paths), expected
+
+	it 'should leave alone inner declarations', (test) ->
+		paths =
+			"/first":
+				get:
+					operationId: "first"
+					parameters: [
+						{
+							name: "param"
+						}
+					]
+					responses:
+						200:
+							schema:
+								type: "number"
+
+		expected = [ {
+			"path": "/first"
+			"method": "get"
+			"operationId": "first"
+			"parameters": [
+				{
+					name: "param"
+				}
+			]
+			"responses":
+				200:
+					schema:
+						type: "number"
+		} ]
+
+		test.equal makePathsIterable(paths), expected
+
+
 describe 'makeResponsesIterable', ->
 	it 'should inline HTTP status code', (test) ->
 		responses =
