@@ -1,4 +1,4 @@
-describe 'transformResponses', ->
+describe 'makeResponsesIterable', ->
 	it 'should inline HTTP status code', (test) ->
 		responses =
 			200:
@@ -19,7 +19,7 @@ describe 'transformResponses', ->
 				"application/json": "112043"
 		} ];
 
-		test.equal transformResponses(responses), expected
+		test.equal makeResponsesIterable(responses), expected
 
 	# it 'should resolve schema references', (test) ->	# pending
 		responses =
@@ -61,4 +61,4 @@ describe 'transformResponses', ->
 			}
 		} ]
 
-	#	test.equal transformResponses(responses), expected	# pending
+	#	test.equal makeResponsesIterable(responses), expected	# pending

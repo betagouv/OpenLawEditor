@@ -31,7 +31,7 @@ makePathsIterable = function makePathsIterable(paths) {
 *@param	{Object}	[schemas]	Additional schema definitions within which to resolve references.
 *@returns	{Array}	The responses, with schema references resolved and status codes inlined in each response description object, under the `code` key.
 */
-transformResponses = function transformResponses(responses, schemas) {
+makeResponsesIterable = function makeResponsesIterable(responses, schemas) {
 	var result = [];
 
 	for (var code in responses) {
