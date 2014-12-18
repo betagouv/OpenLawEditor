@@ -3,9 +3,9 @@
 
 	{{#if facets.swagger}}
 
-	{{> swagger resourceDeclaration}}
+		{{> swagger facets.swagger}}
 
-	<h3>API</h3>
-	{{> swaggerFacet facets.swagger}}
+		<h3>API</h3>
+		{{> swaggerFacet facets.swagger}}
 	{{/if}}
 </template>
