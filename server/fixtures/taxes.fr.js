@@ -87,7 +87,8 @@ var TaxesFr = [
 		facets: {
 			swagger: {
 				resourceDeclaration: '/swagger-paie.json',
-				operationId: "calculateFillon"
+				method: "get",
+				path: "/fillon"
 			}
 		}
 	},
@@ -161,7 +162,8 @@ var TaxesFr = [
 		facets: {
 			swagger: {
 				resourceDeclaration: '/swagger-paie.json',
-				operationId: "calculateNet"
+				method: "get",
+				path: "/net"
 			}
 		}
 	}
