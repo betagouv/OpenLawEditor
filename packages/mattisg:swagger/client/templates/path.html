@@ -3,22 +3,25 @@
 		<h2>{{method}} {{path}}</h2>
 		<p>{{summary}}</p>
 
-		{{#if parameters}}
-			<table class="parameters">
-				<thead>
-					<th>{{_ 'name'}}</th>
-					<th>{{_ 'type'}}</th>
-					<th>{{_ 'description'}}</th>
-					<th>{{_ 'source'}}</th>
-					<th>{{_ 'value'}}</th>
-				</thead>
-				<tbody>
-					{{#each parameters}}
-						{{> swagger_parameter}}
-					{{/each}}
-				</tbody>
-			</table>
-		{{/if}}
+		<form method="{{method}}" action="{{pathPrefix}}{{path}}">
+			{{#if parameters}}
+				<table class="parameters">
+					<thead>
+						<th>{{_ 'name'}}</th>
+						<th>{{_ 'type'}}</th>
+						<th>{{_ 'description'}}</th>
+						<th>{{_ 'source'}}</th>
+						<th>{{_ 'value'}}</th>
+					</thead>
+					<tbody>
+						{{#each parameters}}
+							{{> swagger_parameter}}
+						{{/each}}
+					</tbody>
+				</table>
+			{{/if}}
+			<input type="submit" value="{{_ 'send'}}"/>
+		</form>
 
 		<table class="responses">
 			<thead>
