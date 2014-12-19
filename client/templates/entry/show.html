@@ -2,8 +2,10 @@
 	<h2>{{name}}</h2>
 
 	{{#if facets.swagger}}
-
-		{{> swagger facets.swagger}}
+		{{#if path}}
 			{{> swagger_path path}}
+		{{else}}
+			{{> loading}}
+		{{/if}}
 	{{/if}}
 </template>
