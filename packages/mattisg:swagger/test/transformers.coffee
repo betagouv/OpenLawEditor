@@ -1,3 +1,40 @@
+describe 'inlineOperation', ->
+	paths =
+		'/first':
+			get:
+				operationId: 'first'
+
+	it 'should unwrap a path and method', (test) ->
+		expected =
+			path:			'/first'
+			method:			'get'
+			operationId:	'first'
+
+		test.equal inlineOperation(paths, '/first', 'get'), expected
+
+	context 'with an improper method', ->
+		it 'should throw a helpful error', (test) ->
+			try
+				inlineOperation(paths, '/first', 'post')
+			catch err
+				thrown = err
+
+			test.isTrue !! thrown
+			test.matches thrown.message, /post/
+			test.matches thrown.message, /first/
+
+	context 'with an improper path', ->
+		it 'should throw a helpful error', (test) ->
+			try
+				inlineOperation(paths, '/non-existent', 'get')
+			catch err
+				thrown = err
+
+			test.isTrue !! thrown
+			test.matches thrown.message, /get/
+			test.matches thrown.message, /non-existent/
+
+
 describe 'makePathsIterable', ->
 	it 'should unwrap paths and methods', (test) ->
 		paths =

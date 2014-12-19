@@ -15,14 +15,28 @@ makePathsIterable = function makePathsIterable(paths) {
 			if (! Object.prototype.hasOwnProperty.call(methods, method))
 				continue;
 
-			var description = EJSON.clone(paths[path][method]);
-
-			description.path = path;
-			description.method = method;
-
-			result.push(description);
+			result.push(inlineOperation(paths, path, method));
 		}
 	}
+
+	return result;
+}
+
+/**
+*@param	{Object}	operationsDescription	A Swagger [paths object](https://github.com/swagger-api/swagger-spec/blob/master/versions/2.0.md#paths-object-).
+*@param	{String}	path	A path.
+*@param	{String}	method	An HTTP method, lowercase.
+*@returns	{Object}	The description for the given operation, with path and method inlined.
+*@throws	{ReferenceError}	If the given operation does not exist in the given description.
+*/
+inlineOperation = function inlineOperation(operationsDescription, path, method) {
+	if (! (operationsDescription && operationsDescription[path] && operationsDescription[path][method]))
+		throw new ReferenceError('The description of an operation with HTTP method "' + method + '" on path "' + path + '" could not be found in ' + JSON.stringify(operationsDescription));
+
+	var result = EJSON.clone(operationsDescription[path][method]);
+
+	result.path = path;
+	result.method = method;
 
 	return result;
 }

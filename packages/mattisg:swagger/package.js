@@ -29,6 +29,8 @@ Package.onUse(function(api) {
 	api.addFiles(all('client/templates', 'html')('parameter path response info swagger'), 'client');
 	api.addFiles(all('client/templates', 'js')('path swagger'), 'client');
 	api.addFiles(all('i18n', 'fr.i18n.json')('helpers swagger path'));
+
+	api.export('inlineOperation');
 });
 
 Package.onTest(function(api) {
