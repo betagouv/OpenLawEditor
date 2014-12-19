@@ -7,13 +7,14 @@ Template.entryShow.created = function() {
 	});
 }
 
-
 Template.entryShow.helpers({
 	path: function() {
 		if (Session.get('resourceDeclaration')) {
-			var method	= Template.instance().data.facets.swagger.method,
-				path	= Template.instance().data.facets.swagger.path;
-			return Session.get('resourceDeclaration').paths[path][method];
+			return inlineOperation(
+				Session.get('resourceDeclaration').paths,
+				Template.instance().data.facets.swagger.path,
+				Template.instance().data.facets.swagger.method
+			);
 		}
 	}
 });
