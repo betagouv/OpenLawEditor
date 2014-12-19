@@ -86,7 +86,7 @@ var TaxesFr = [
 		"name": "Allègement sur les bas salaires (Fillon)",
 		facets: {
 			swagger: {
-				resourceDeclaration: '/swagger-paie.json',
+				resourceDeclarationUrl: '/swagger-paie.json',
 				method: "get",
 				path: "/fillon"
 			}
@@ -161,7 +161,7 @@ var TaxesFr = [
 		"name": "Salaire net",
 		facets: {
 			swagger: {
-				resourceDeclaration: '/swagger-paie.json',
+				resourceDeclarationUrl: '/swagger-paie.json',
 				method: "get",
 				path: "/net"
 			}

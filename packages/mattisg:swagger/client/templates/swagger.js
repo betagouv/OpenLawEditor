@@ -1,9 +1,11 @@
 Template.swagger.created = function() {
-	HTTP.get(this.data.resourceDeclaration, function(error, result) {
-		if (error)	// TODO: handle errors
-			throw error;
+	this.autorun(function() {
+		HTTP.get(Session.get('resourceDeclarationUrl'), function(error, result) {
+			if (error)	// TODO: handle errors
+				throw error;
 
-		Session.set('resourceDeclaration', result.data);
+			Session.set('resourceDeclaration', result.data);
+		});
 	});
 
 	this.autorun(function() {
@@ -18,6 +20,8 @@ Template.swagger.created = function() {
 			console.error(err, 'We will still render. Please report any layout issues you get.');
 		}
 	});
+
+	Session.set('resourceDeclarationUrl', this.data.resourceDeclarationUrl);
 }
 
 

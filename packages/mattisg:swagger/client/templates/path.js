@@ -1,13 +1,18 @@
 Template.swagger_path.helpers({
 	pathPrefix: function() {
-		var resourceDeclaration = Session.get('resourceDeclaration');
+		var	DEFAULT_PORT = 80,
+			resourceDeclaration = Session.get('resourceDeclaration'),
+			uriParser = document.createElement('a');
+
+		uriParser.href = Session.get('resourceDeclarationUrl');
 
 		if (resourceDeclaration) {
 			var basePath	= resourceDeclaration.basePath,
-				host		= resourceDeclaration.host,
-				scheme		= resourceDeclaration.schemes[0];
+				protocol	=	resourceDeclaration.schemes[0] + ':' || uriParser.protocol,
+				host		=	resourceDeclaration.host
+								|| uriParser.hostname + (uriParser.port != DEFAULT_PORT ? ':' + uriParser.port : '');
 
-			return scheme + '://' + host + basePath;
+			return protocol + '//' + host + basePath;
 		}
 	},
 	responses: function() {
