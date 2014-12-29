@@ -1,19 +1,16 @@
 <template name="swagger_parameter">
-	<tr class="{{#if required}}required{{/if}}">
-		<th><label for="{{name}}">{{name}}</label></th>
-		<td>{{type}}</td>
-		<td>{{description}}</td>
-		<td>{{in}}</td>
-		<td>
-			{{#if enum}}
-				<select name="{{name}}" required="{{required}}">
-					{{#each enum}}
-						<option label="{{this}}">{{this}}</option>
-					{{/each}}
-				</select>
-			{{else}}
-				<input name="{{name}}" required="{{required}}" type="{{type}}" min="{{minimum}}" max="{{maximum}}"/>
-			{{/if}}
-		</td>
-	</tr>
+	<dt class="{{#if required}}required{{/if}}">
+		{{description}}
+	</dt>
+	<dd>
+		{{#if enum}}
+			<select name="{{name}}" required="{{required}}">
+				{{#each enum}}
+					<option label="{{this}}">{{this}}</option>
+				{{/each}}
+			</select>
+		{{else}}
+			<input name="{{name}}" required="{{required}}" type="{{type}}" min="{{minimum}}" max="{{maximum}}"/>
+		{{/if}}
+	</dd>
 </template>
