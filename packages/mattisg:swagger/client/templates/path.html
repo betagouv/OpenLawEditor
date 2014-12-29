@@ -3,7 +3,7 @@
 		<h2>{{pathPrefix}}{{path}} ({{uppercase method}})</h2>
 		<p>{{summary}}</p>
 
-		<form method="{{method}}" action="{{pathPrefix}}{{path}}">
+		<form method="{{method}}" action="{{url}}">
 			{{#if parameters}}
 				<dl>
 					{{#each parameters}}
@@ -16,7 +16,7 @@
 
 		<div class="operation">
 			<code class="method">{{uppercase method}}</code>
-			<input class="url" type="url" readonly value="{{pathPrefix}}{{path}}{{#each parameters}}{{name}}={{value name}}&{{/each}}">
+			<input class="url" type="url" readonly value="{{url}}">
 		</div>
 
 		<table class="responses">
