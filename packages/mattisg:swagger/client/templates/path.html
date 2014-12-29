@@ -14,6 +14,11 @@
 			<input type="submit" value="{{_ 'send'}}"/>
 		</form>
 
+		<div class="operation">
+			<code class="method">{{uppercase method}}</code>
+			<input class="url" type="url" readonly value="{{pathPrefix}}{{path}}{{#each parameters}}{{name}}={{value name}}&{{/each}}">
+		</div>
+
 		<table class="responses">
 			<thead>
 				<th>{{_ 'httpCode'}}</th>

@@ -23,11 +23,13 @@ Package.onUse(function(api) {
 	api.versionsFrom('1.0.1');
 	api.use([ 'templating' ], 'client');
 	api.use('tap:i18n@1.2.1');
+	api.use('reactive-dict');
 	// api.use('nooitaf:semantic-ui@1.2.1', { weak: true });
 	api.addFiles(all('lib', 'js')('compatibility transformers'));
 	api.addFiles(all('client/helpers', 'js')('json uppercase'), 'client');
 	api.addFiles(all('client/templates', 'html')('parameter path response info swagger'), 'client');
-	api.addFiles(all('client/templates', 'js')('path swagger'), 'client');
+	api.addFiles(all('client/templates', 'js')('path parameter swagger'), 'client');
+	api.addFiles(all('client/stylesheets', 'css')('swagger'), 'client');
 	api.addFiles(all('i18n', 'fr.i18n.json')('helpers swagger path'));
 
 	api.export('inlineOperation');

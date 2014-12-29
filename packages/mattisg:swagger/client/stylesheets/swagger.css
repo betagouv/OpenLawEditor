@@ -1,0 +1,9 @@
+.operation {
+	display: -webkit-flex;
+	display: flex;
+}
+
+.url {
+	-webkit-flex: auto;
+	flex: auto;
+}

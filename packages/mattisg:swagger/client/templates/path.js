@@ -1,3 +1,8 @@
+Template.swagger_path.created = function() {
+	this.data.parameterValues = new ReactiveDict();	// store in .data to provide access to subtemplates through `parentData`
+}
+
+
 Template.swagger_path.helpers({
 	pathPrefix: function() {
 		var	DEFAULT_PORT = 80,
@@ -15,7 +20,12 @@ Template.swagger_path.helpers({
 			return protocol + '//' + host + basePath;
 		}
 	},
+
 	responses: function() {
 		return makeResponsesIterable(Template.instance().data.responses);
+	},
+
+	value: function(parameterName) {
+		return Template.instance().data.parameterValues.get(parameterName);
 	}
 });
