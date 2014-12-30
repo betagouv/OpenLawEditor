@@ -1,4 +1,6 @@
 Template.entryShow.created = function() {
+	Session.set('resourceDeclarationUrl', this.data.facets.swagger.resourceDeclarationUrl);
+
 	this.autorun(function() {
 		HTTP.get(Session.get('resourceDeclarationUrl'), function(error, result) {
 			if (error)	// TODO: handle errors
@@ -7,8 +9,6 @@ Template.entryShow.created = function() {
 			Session.set('resourceDeclaration', result.data);
 		});
 	});
-
-	Session.set('resourceDeclarationUrl', this.data.facets.swagger.resourceDeclarationUrl);
 }
 
 Template.entryShow.helpers({
