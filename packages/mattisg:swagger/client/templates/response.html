@@ -1,7 +1,6 @@
 <template name="swagger_response">
-	<tr class="{{code}} {{#if actual}}actual{{/if}}">
-		<th>{{code}}</th>
-		<td>{{description}}</td>
-		<td>{{{json schema}}}</td>
-	</tr>
+	<dl>
+		<dt>{{description}}</dt>
+		<dd title="{{_ 'httpCode'}} {{statusCode}}">{{{json data}}}</dd>
+	</dl>
 </template>

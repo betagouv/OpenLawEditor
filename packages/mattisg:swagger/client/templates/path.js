@@ -55,6 +55,14 @@ Template.swagger_path.helpers({
 		return makeResponsesIterable(responses);
 	},
 
+	response: function() {
+		var result = Template.instance().response.get();
+		if (result) {
+			result.description = Template.instance().data.responses[result.statusCode].description;
+			return result;
+		}
+	},
+
 	value: function(parameterName) {
 		return Template.instance().data.parameterValues.get(parameterName);
 	}

@@ -11,7 +11,7 @@
 					{{/each}}
 				</dl>
 			{{/if}}
-			<input type="submit" value="{{_ 'send'}}"/>
+			<input type="submit" value="{{_ 'send'}}" class="ui primary button"/>
 		</form>
 
 		<div class="operation">
@@ -19,17 +19,8 @@
 			<input class="url" type="url" readonly value="{{url}}">
 		</div>
 
-		<table class="responses">
-			<thead>
-				<th>{{_ 'httpCode'}}</th>
-				<th>{{_ 'description'}}</th>
-				<th>{{_ 'contentModel'}}</th>
-			</thead>
-			<tbody>
-				{{#each responses}}
-					{{> swagger_response}}
-				{{/each}}
-			</tbody>
-		</table>
+		{{#if response}}
+			{{> swagger_response response}}
+		{{/if}}
 	</article>
 </template>
