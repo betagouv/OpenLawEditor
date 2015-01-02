@@ -1,5 +1,5 @@
 <template name="swagger_response">
-	<tr class="{{code}}">
+	<tr class="{{code}} {{#if actual}}actual{{/if}}">
 		<th>{{code}}</th>
 		<td>{{description}}</td>
 		<td>{{{json schema}}}</td>
