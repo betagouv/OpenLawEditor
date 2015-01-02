@@ -1,4 +1,7 @@
 Template.entryShow.created = function() {
+	if (! (this.data.facets && this.data.facets.swagger))
+		return;
+
 	Session.set('resourceDeclarationUrl', this.data.facets.swagger.resourceDeclarationUrl);
 
 	this.autorun(function() {
