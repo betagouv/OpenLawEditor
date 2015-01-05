@@ -11,7 +11,7 @@ Template.wikipedia.created = function() {
 			if (error)
 				throw error;
 
-			this.article.set(result.data);
+			this.article.set(result);
 		}.bind(this));
 	}.bind(this));
 }
@@ -19,6 +19,6 @@ Template.wikipedia.created = function() {
 
 Template.wikipedia.helpers({
 	article: function() {
-		return JSON.stringify(Template.instance().article.get());
+		return Template.instance().article.get();
 	}
 });
