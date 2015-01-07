@@ -1,7 +1,7 @@
 var DEFAULTS = {
 	lang: 'en',
 	host: 'wikipedia.org',
-	name: 'Main_page'
+	title: 'Main_page'
 }
 
 var QUERY = '/w/api.php?action=query&prop=revisions&rvprop=content&format=json&rvparse&continue&titles=';
@@ -35,7 +35,7 @@ Meteor.methods({
 	wikipedia: function(data) {
 		data = _.defaults(data, DEFAULTS);
 
-		var url = 'https://' + data.lang + '.' + data.host + QUERY + data.name;
+		var url = 'https://' + data.lang + '.' + data.host + QUERY + data.title;
 
 		return Meteor.wrapAsync(getAndParse)(url);
 	}

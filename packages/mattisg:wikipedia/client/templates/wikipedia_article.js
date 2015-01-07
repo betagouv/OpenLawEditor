@@ -1,12 +1,12 @@
-Template.wikipedia.created = function() {
-	this.lang = new ReactiveVar('fr');
-	this.name = new ReactiveVar(this.data.name);
+Template.wikipedia_article.created = function() {
+	this.lang = new ReactiveVar(this.data.lang);
+	this.title = new ReactiveVar(this.data.title);
 	this.article = new ReactiveVar();
 
 	this.autorun(function() {
 		Meteor.call('wikipedia', {
 			lang: this.lang.get(),
-			name: this.name.get()
+			title: this.title.get()
 		}, function(error, result) {
 			if (error)
 				throw error;
@@ -17,7 +17,7 @@ Template.wikipedia.created = function() {
 }
 
 
-Template.wikipedia.helpers({
+Template.wikipedia_article.helpers({
 	article: function() {
 		return Template.instance().article.get();
 	}

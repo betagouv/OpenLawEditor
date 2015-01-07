@@ -1,3 +1,11 @@
 <template name="wikipedia">
-	{{{article}}}
+	<blockquote class="wikipedia">
+		{{> wikipedia_article}}
+
+		<footer>
+			<cite>
+				{{> wikipedia_cite}}
+			</cite>
+		</footer>
+	</blockquote>
 </template>
