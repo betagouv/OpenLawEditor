@@ -6,3 +6,15 @@ Template.swagger_parameter.events({
 		Template.parentData(1).parameterValues.set(template.data.name, event.target.value);	// notify parent template of the value change
 	}
 });
+
+
+Template.swagger_parameter.helpers({
+	type: function() {
+		var swaggerType = Template.instance().data.type;
+
+		if (swaggerType == 'integer')
+			return 'number';
+
+		return swaggerType;
+	}
+});
