@@ -1,5 +1,7 @@
 <template name="entryShow">
 	<h2>{{name}}</h2>
 
-	{{> wikipedia lang='fr' title=_id}} {{> wikipedia_edit lang='fr' title=_id}}
+	{{#if facets.wikipedia}}
+		{{> wikipedia lang='fr' title=facets.wikipedia.title}} {{> wikipedia_edit lang='fr' title=facets.wikipedia.title}}
+	{{/if}}
 </template>
