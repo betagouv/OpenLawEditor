@@ -31,6 +31,6 @@ Package.onUse(function(api) {
 	api.addFiles(all('client/templates', 'html')('wikipedia wikipedia_article wikipedia_cite wikipedia_edit'), 'client');
 	api.addFiles(all('client/templates', 'js')('wikipedia_article'), 'client');
 	api.addFiles(all('client/stylesheets', 'css')('mediawiki'), 'client');
-	api.addFiles(all('i18n', 'fr.i18n.json')('wikipedia_cite wikipedia_edit'), 'client');
+	api.addFiles(all('i18n', 'fr.i18n.json')('wikipedia_cite wikipedia_edit'));
 	api.addFiles(all('server', 'js')('wikipedia'), 'server');
 });
