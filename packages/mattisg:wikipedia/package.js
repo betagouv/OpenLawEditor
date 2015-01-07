@@ -12,8 +12,10 @@ Package.onUse(function(api) {
 	api.use('http', 'server');
 	api.use('underscore', 'server');
 	api.use('reactive-var', 'client');
+	api.use('tap:i18n@1.2.1');
 	api.addFiles('client/templates/wikipedia.html',  'client');
 	api.addFiles('client/templates/wikipedia.js',    'client');
 	api.addFiles('client/stylesheets/mediawiki.css', 'client');
+	api.addFiles('i18n/wikipedia_cite.fr.i18n.json');
 	api.addFiles('server/wikipedia.js',              'server');
 });
