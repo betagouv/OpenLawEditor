@@ -20,9 +20,6 @@ function all(directory, extension) {
 }
 
 
-Npm.depends({
-	'nodemw': '0.3.16'
-});
 
 Package.onUse(function(api) {
 	api.versionsFrom('1.0.1');
