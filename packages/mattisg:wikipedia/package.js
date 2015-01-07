@@ -14,5 +14,6 @@ Package.onUse(function(api) {
 	api.use('reactive-var', 'client');
 	api.addFiles('client/templates/wikipedia.html',  'client');
 	api.addFiles('client/templates/wikipedia.js',    'client');
+	api.addFiles('client/stylesheets/mediawiki.css', 'client');
 	api.addFiles('server/wikipedia.js',              'server');
 });
