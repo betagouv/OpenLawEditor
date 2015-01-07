@@ -27,9 +27,10 @@ Package.onUse(function(api) {
 	api.use('underscore', 'server');
 	api.use('reactive-var', 'client');
 	api.use('tap:i18n@1.2.1');
-	api.addFiles(all('client/templates', 'html')('wikipedia wikipedia_article wikipedia_cite'), 'client');
+	api.use('nooitaf:semantic-ui', 'client', { weak: true });
+	api.addFiles(all('client/templates', 'html')('wikipedia wikipedia_article wikipedia_cite wikipedia_edit'), 'client');
 	api.addFiles(all('client/templates', 'js')('wikipedia_article'), 'client');
 	api.addFiles(all('client/stylesheets', 'css')('mediawiki'), 'client');
-	api.addFiles(all('i18n', 'fr.i18n.json')('wikipedia_cite'), 'client');
+	api.addFiles(all('i18n', 'fr.i18n.json')('wikipedia_cite wikipedia_edit'), 'client');
 	api.addFiles(all('server', 'js')('wikipedia'), 'server');
 });
