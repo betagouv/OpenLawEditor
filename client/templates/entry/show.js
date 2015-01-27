@@ -12,6 +12,9 @@ Template.entryShow.created = function() {
 			Session.set('resourceDeclaration', result.data);
 		});
 	});
+
+	this.parameterValues = new ReactiveDict();	// store in .data to provide access to subtemplates through `parentData`
+	this.response = new ReactiveVar();
 }
 
 Template.entryShow.helpers({
@@ -26,12 +29,42 @@ Template.entryShow.helpers({
 		return result;
 	},
 	path: function() {
+		var result = {
+			parameterValues: Template.instance().parameterValues
+		};
+
 		if (Session.get('resourceDeclaration')) {
-			return inlineOperation(
+			result = _.extend(result, inlineOperation(
 				Session.get('resourceDeclaration').paths,
 				Template.instance().data.facets.swagger.path,
 				Template.instance().data.facets.swagger.method
-			);
+			));
 		}
+
+		return result;
+	},
+
+	value: function() {
+		var response = Template.instance().response.get();
+
+		if (response)
+			return response.value;
 	}
+});
+
+Template.entryShow.events({
+	'keyup, change, submit': _.debounce(function(event, template) {
+		event.preventDefault();
+
+		template.response.set();
+
+		HTTP.call(template.data.facets.swagger.method, template.find('.url').innerText, {
+			timeout: 10000
+		}, function(error, result) {
+			if (error)
+				throw error;	// TODO: handle error
+
+			template.response.set(result.data);
+		});
+	}, 400)
 });
