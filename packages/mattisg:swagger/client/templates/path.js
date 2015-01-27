@@ -23,10 +23,6 @@ Template.swagger_path.helpers({
 			result.description = Template.instance().data.responses[result.statusCode].description;
 			return result;
 		}
-	},
-
-	value: function(parameterName) {
-		return Template.instance().data.parameterValues.get(parameterName);
 	}
 });
 
