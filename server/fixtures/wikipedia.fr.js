@@ -17,6 +17,10 @@ var data = [
 		"title": "Versement_transport"
 	},
 	{
+		"_id": "accident_du_travail",
+		"title": "Accident_du_travail_en_France"
+	},
+	{
 		"_id": "csgsald",
 		"title": "Contribution_sociale_généralisée"
 	},
