@@ -1,6 +1,6 @@
 <template name="swagger_path">
 	<article id="{{#if operationId}}swagger-{{operationId}}{{/if}}" class="{{method}}">
-		<h2>{{pathPrefix}}{{path}} ({{uppercase method}})</h2>
+		<h2>{{path}} (<code>{{uppercase method}}</code>)</h2>
 		<p>{{summary}}</p>
 
 		<form method="{{method}}">
