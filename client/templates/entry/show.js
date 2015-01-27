@@ -43,7 +43,7 @@ Template.entryShow.helpers({
 });
 
 Template.entryShow.events({
-	'change, submit': function(event, template) {
+	'keyup, change, submit': _.debounce(function(event, template) {
 		event.preventDefault();
 
 		HTTP.call(template.data.facets.swagger.method, template.find('.url').innerText, {
@@ -54,5 +54,5 @@ Template.entryShow.events({
 
 			template.response.set(result.data);
 		});
-	}
+	}, 400)
 });
