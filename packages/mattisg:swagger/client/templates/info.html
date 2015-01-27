@@ -1,0 +1,27 @@
+<template name="swagger_info">
+	<h1>{{title}} API</h1>
+
+	<details>
+		<summary>{{description}}</summary>
+
+		<p>{{_ 'version'}} {{version}}</p>
+
+		{{#if termsOfService}}
+			<p><a href="{{termsOfService}}">{{_ 'tos'}}</a></p>
+		{{/if}}
+
+		{{#if contact}}
+			<p>
+				{{_ 'contact'}}{{_ 'colon'}} {{contact.name}}
+
+				{{#if contact.email}}
+					(<a href="mailto:{{contact.name}} <{{contact.email}}>?subject={{name}}">{{_ 'email'}}</a>)
+				{{/if}}
+
+				{{#if contact.url}}
+					(<a href="{{contact.url}}">{{_ 'website'}}</a>)
+				{{/if}}
+			</p>
+		{{/if}}
+	</details>
+</template>

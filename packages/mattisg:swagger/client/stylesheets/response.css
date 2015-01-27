@@ -1,0 +1,22 @@
+.actual {
+	-webkit-animation: highlight 2s;
+			animation: highlight 2s;
+}
+
+@-webkit-keyframes highlight {
+	0% {
+		background: yellow;
+	}
+	100% {
+		background: none;
+	}
+}
+
+@keyframes highlight {
+	0% {
+		background: yellow;
+	}
+	100% {
+		background: none;
+	}
+}

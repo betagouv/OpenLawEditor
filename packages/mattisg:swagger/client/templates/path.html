@@ -1,0 +1,26 @@
+<template name="swagger_path">
+	<article id="{{#if operationId}}swagger-{{operationId}}{{/if}}" class="{{method}}">
+		<h2>{{pathPrefix}}{{path}} ({{uppercase method}})</h2>
+		<p>{{summary}}</p>
+
+		<form method="{{method}}" action="{{url}}">
+			{{#if parameters}}
+				<dl>
+					{{#each parameters}}
+						{{> swagger_parameter}}
+					{{/each}}
+				</dl>
+			{{/if}}
+			<input type="submit" value="{{_ 'send'}}" class="ui primary button"/>
+		</form>
+
+		<div class="operation">
+			<code class="method">{{uppercase method}}</code>
+			<input class="url" type="url" readonly value="{{url}}">
+		</div>
+
+		{{#if response}}
+			{{> swagger_response response}}
+		{{/if}}
+	</article>
+</template>
