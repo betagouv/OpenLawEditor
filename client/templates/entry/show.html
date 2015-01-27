@@ -3,7 +3,11 @@
 
 	{{#if facets.swagger}}
 		{{#if path}}
-			{{> swagger_path path}}
+			{{> swagger_form path}}
+			<code class="url">{{> swagger_url path}}</code>
+			{{#if value}}
+				<h3>{{path.summary}}{{_ 'colon'}} {{value}}</h3>
+			{{/if}}
 		{{else}}
 			{{> loading}}
 		{{/if}}

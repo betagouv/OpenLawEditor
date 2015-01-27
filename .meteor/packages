@@ -10,4 +10,6 @@ iron:router
 http
 mattisg:swagger
 tap:i18n
+reactive-dict
+reactive-var
 
