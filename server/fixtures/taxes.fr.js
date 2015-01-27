@@ -128,9 +128,9 @@ var TaxesFr = [
 		"name": "Allègement sur les bas salaires (Fillon)",
 		facets: {
 			swagger: {
-				resourceDeclarationUrl: '/swagger-paie.json',
+				resourceDeclarationUrl: 'http://api-test.openfisca.fr/api/1/swagger',
 				method: "get",
-				path: "/fillon"
+				path: "/allegement_fillon"
 			}
 		}
 	},
@@ -252,9 +252,9 @@ var TaxesFr = [
 		"name": "Salaire net",
 		facets: {
 			swagger: {
-				resourceDeclarationUrl: '/swagger-paie.json',
+				resourceDeclarationUrl: 'http://api-test.openfisca.fr/api/1/swagger',
 				method: "get",
-				path: "/net"
+				path: "/salnet"
 			}
 		}
 	}
