@@ -43,7 +43,7 @@ Template.entryShow.helpers({
 });
 
 Template.entryShow.events({
-	'submit': function(event, template) {
+	'change, submit': function(event, template) {
 		event.preventDefault();
 
 		HTTP.call(template.data.facets.swagger.method, template.find('.url').innerText, {
