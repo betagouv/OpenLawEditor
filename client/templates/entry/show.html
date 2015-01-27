@@ -5,11 +5,9 @@
 		{{> wikipedia lang='fr' title=facets.wikipedia.title}} {{> wikipedia_edit lang='fr' title=facets.wikipedia.title}}
 	{{/if}}
 
-	{{#if facets.swagger}}
-		{{#if path}}
-			{{> swagger_path path}}
-		{{else}}
-			{{> loading}}
-		{{/if}}
+	{{#if path}}
+		{{> swagger_path path}}
+	{{else}}
+		{{> loading}}
 	{{/if}}
 </template>
