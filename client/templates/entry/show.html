@@ -5,9 +5,7 @@
 		{{#if path}}
 			{{> swagger_form path}}
 			<code class="url">{{> swagger_url path}}</code>
-			{{#if value}}
-				<h3>{{path.summary}}{{_ 'colon'}} {{value}}</h3>
-			{{/if}}
+			<h3>{{path.summary}}{{_ 'colon'}} {{value}}</h3>
 		{{else}}
 			{{> loading}}
 		{{/if}}

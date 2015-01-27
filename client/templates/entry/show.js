@@ -46,6 +46,8 @@ Template.entryShow.events({
 	'keyup, change, submit': _.debounce(function(event, template) {
 		event.preventDefault();
 
+		template.response.set();
+
 		HTTP.call(template.data.facets.swagger.method, template.find('.url').innerText, {
 			timeout: 10000
 		}, function(error, result) {
