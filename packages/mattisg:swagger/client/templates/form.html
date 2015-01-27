@@ -1,0 +1,12 @@
+<template name="swagger_form">
+	<form method="{{method}}">
+		{{#if parameters}}
+			<dl>
+				{{#each parameters}}
+					{{> swagger_parameter}}
+				{{/each}}
+			</dl>
+		{{/if}}
+		<input type="submit" value="{{_ 'send'}}" class="ui primary button"/>
+	</form>
+</template>
